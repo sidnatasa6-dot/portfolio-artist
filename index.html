@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфоліо художника — Наталія Сідько</title>
+</head>
+<body>
+
+    <header>
+        <h1>Майстерня живопису Наталії Сідько</h1>
+        <nav>
+            <a href="#about">Про мене</a>
+            <a href="#projects">Проєкти</a>
+            <a href="#contact">Контакти</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Про мене</h2>
+            <p>
+                Вітаю! Я сучасна українська художниця, працюю у техніках олійного живопису, 
+                акварелі та графіки. На цьому сайті представлена галерея моїх авторських полотен, 
+                інформація про виставки та можливість замовити індивідуальну картину.
+            </p>
+            <ul>
+                <li>Авторський пейзажний та портретний олійний живопис</li>
+                <li>Ботанічна та архітектурна акварельна ілюстрація</li>
+                <li>Створення картин на замовлення для інтер'єру</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Проєкти</h2>
+            <article>
+                <h3>Серія полотен «Барви рідного краю»</h3>
+                <p>Колекція з 12 пейзажів олією на полотні, присвячена природі Полтавщини та берегам Дніпра.</p>
+            </article>
+            <article>
+                <h3>Виставка графіки «Світло і тінь»</h3>
+                <p>Серія монохромних портретів та архітектурних замальовок тушшю й вугіллям.</p>
+            </article>
+            <article>        <h3>Акварельний цикл «Квіткові етюди»</h3>
+                <p>Ніжні ботанічні ілюстрації на бавовняному папері для оформлення сучасних інтер'єрів.</p>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Контакти</h2>
+            <form action="#" method="post">
+                <label for="name">Ім'я *</label><br>
+                <input type="text" id="name" name="name" required minlength="2" maxlength="50"><br><br>
+
+                <label for="email">Електронна пошта *</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="topic">Тема звернення *</label><br>
+                <select id="topic" name="topic" required>
+                    <option value="" disabled selected>Оберіть тему</option>
+                    <option value="general">Загальне питання</option>
+                    <option value="work">Замовлення картини / Співпраця</option>
+                </select><br><br>
+
+                <label for="message">Повідомлення *</label><br>
+                <textarea id="message" name="message" required maxlength="500" rows="5"></textarea><br><br>
+
+                <button type="submit">Надіслати</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Наталія Сідько. Усі права захищено.</p>
+    </footer>
+
+</body>
+</html>
