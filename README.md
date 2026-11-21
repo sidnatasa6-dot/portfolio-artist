@@ -9,3 +9,8 @@
 - HTML5
 - CSS3
 - JavaScript
+
+
+## Лабораторна робота № 5: CSS Grid Дашборд
+- Створено адаптивну сторінку аналітичної панелі (`dashboard.html`, `dashboard.css`).
+- Використано двовимірну розкладку CSS Grid (`grid-template-areas`, `fr`, `repeat()`, `minmax()`, `auto-fit`, `span 2`, `grid-auto-flow: dense`) та вкладену Grid-діаграму.

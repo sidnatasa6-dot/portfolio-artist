@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дашборд — Перегляди галереї та продажі картин</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="layout">
+        <header class="layout__header">
+            <h1>Перегляди галереї та продажі картин</h1>
+        </header>
+
+        <aside class="layout__sidebar">
+            <nav aria-label="Розділи дашборду">
+                <ul>
+                    <li><a href="#">Огляд</a></li>
+                    <li><a href="#">Продажі</a></li>
+                    <li><a href="#">Виставки</a></li>
+                    <li><a href="index.html">← До портфоліо</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="layout__main">
+            <section class="cards" aria-label="Ключові показники">
+                <article class="card card--wide">
+                    <h2>Динаміка переглядів галереї за тиждень (Пн–Нд)</h2>
+                    <div class="chart" role="img" aria-label="Стовпчикова діаграма переглядів за сім днів">
+                        <span style="--h: 45%" title="Понеділок: 45%"></span>
+                        <span style="--h: 60%" title="Вівторок: 60%"></span>
+                        <span style="--h: 55%" title="Середа: 55%"></span>
+                        <span style="--h: 75%" title="Четвер: 75%"></span>
+                        <span style="--h: 90%" title="П'ятниця: 90%"></span>
+                        <span style="--h: 100%" title="Субота: 100%"></span>
+                        <span style="--h: 80%" title="Неділя: 80%"></span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h2>Переглядів за місяць</h2>
+                    <p class="card__value">3 420</p>
+                </article>
+
+                <article class="card">
+                    <h2>Продано картин</h2>
+                    <p class="card__value">14</p>
+                </article>
+
+                <article class="card card--tall">
+                    <h2>Рейтинг робіт</h2>
+                    <p class="card__value">4,9 ★</p>
+                    <p class="card__note">Середня оцінка відвідувачів онлайн-галереї та покупців за квартал</p>
+                </article>
+
+                <article class="card">
+                    <h2>Активних замовлень</h2>
+                    <p class="card__value">5</p>
+                </article>
+
+                <article class="card">
+                    <h2>Середня вартість</h2>
+                    <p class="card__value">6 800 ₴</p>
+                </article>
+
+                <article class="card">
+                    <h2>Полотна в наявності</h2>
+                    <p class="card__value">28</p>
+                </article>
+            </section>
+        </main>
+
+        <footer class="layout__footer">
+            <p>© 2026 Сідько Наталія • Група СОІ-24-1 • Лабораторна робота № 5</p>
+        </footer>
+    </div>
+</body>
+</html>
