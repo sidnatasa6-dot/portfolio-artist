@@ -1,0 +1,171 @@
+/* === Стилі компонента To-Do List (ЛР № 7) === */
+.todo {
+  max-width: 720px;
+  margin: var(--spacing-lg, 24px) auto;
+  padding: 0 var(--spacing-md, 16px);
+}
+
+.todo-card {
+  background-color: var(--color-surface, #ffffff);
+  padding: var(--spacing-lg, 24px);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* Форма додавання завдання */
+#todo-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+#todo-form label {
+  flex-basis: 100%;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+#todo-form input[type="text"],
+#todo-form input[type="date"],
+#todo-form input[type="number"],
+#todo-form select {
+  margin-bottom: 0;
+  padding: 8px 12px;
+}
+
+#todo-text {
+  flex: 1 1 240px;
+  max-width: none;
+}
+
+#todo-form select,
+#todo-form input[type="date"],
+#todo-form input[type="number"],
+#todo-category,
+#todo-tag {
+  flex: 0 1 160px;
+  width: auto;
+}
+
+/* Повідомлення про помилку валідації */
+.error {
+  color: #b42318;
+  font-weight: 600;
+  min-height: 1.5em;
+  margin: 8px 0;
+}
+
+/* Панель фільтрів та додаткових інструментів */
+.todo-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0 16px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filters button {
+  background-color: #e2e8f0;
+  color: var(--color-text, #1e293b);
+  padding: 8px 14px;
+  font-size: 0.95rem;
+}
+
+.filters button.is-active {
+  background-color: var(--color-accent, #DB2777);
+  color: #ffffff;
+}
+
+/* Додаткові елементи керування (пошук, сортування, очищення, прогрес) */
+#todo-sort,
+#todo-search {
+  width: auto;
+  max-width: 220px;
+  margin-bottom: 0;
+  padding: 7px 10px;
+}
+
+/* Список завдань (CSS Grid) */
+#todo-list {
+  list-style: none;
+  margin: 0 0 16px 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+#todo-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background-color: #ffffff;
+  border: 1px solid #d8dee4;
+  border-radius: 8px;
+  margin-bottom: 0;
+}
+
+#todo-list input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: var(--color-accent, #DB2777);
+}
+
+#todo-list .text {
+  flex: 1 1 180px;
+  overflow-wrap: anywhere;
+}
+
+#todo-list .meta {
+  font-size: 0.85rem;
+  color: #475569;
+  background-color: #f1f5f9;
+  padding: 2px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+#todo-list .edit-input {
+  flex: 1 1 200px;
+  max-width: none;
+  margin-bottom: 0;
+  padding: 6px 10px;
+}
+
+#todo-list li button {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+#todo-list li button[data-action="delete"],
+#todo-list li button[data-action="cancel"] {
+  background-color: #64748b;
+}
+
+#todo-list li.is-done .text {
+  text-decoration: line-through;
+  color: #6b7684;
+}
+
+#todo-list li.empty {
+  color: #6b7684;
+  justify-content: center;
+  padding: 20px;
+  font-style: italic;
+}
+
+#todo-counter {
+  font-weight: 600;
+  margin-bottom: 0;
+}
