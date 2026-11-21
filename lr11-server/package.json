@@ -1,12 +1,14 @@
 {
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.12.3"
   },
   "scripts": {
     "dev": "node --watch --env-file=.env server.js",
     "seed": "node --env-file=.env seed.js",
-    "check": "node --env-file=.env scripts/check-api.mjs"
+    "check": "node --env-file=.env scripts/check-auth.mjs"
   },
   "type": "module"
 }

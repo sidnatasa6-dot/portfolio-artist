@@ -26,6 +26,12 @@ const paintingSchema = new mongoose.Schema(
       min: [1400, 'year: не менше 1400'],
       max: [2100, 'year: не більше 2100'],
     },
+    owner: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: [true, 'У запису має бути власник'],
+      index: true,
+    },
   },
   {
     timestamps: true,
@@ -36,7 +42,7 @@ const paintingSchema = new mongoose.Schema(
         delete ret._id;
       },
     },
-  }
+  },
 );
 
 export default mongoose.model('Painting', paintingSchema);

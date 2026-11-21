@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:3008
+
+### 1. Отримати список усіх картин (публічний маршрут, щоб дізнатися id чужої картини)
+# @name getAll
+GET {{baseUrl}}/api/paintings
+
+### 2. Вхід під обліковим записом Аліси (для Скриншота № 3)
+# @name loginAlice
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "alice@example.com",
+  "password": "Passw0rd!"
+}
+
+### 3. Перевірка профілю поточного користувача
+GET {{baseUrl}}/api/auth/me
+Authorization: Bearer {{loginAlice.response.body.token}}
+
+### 4. Спроба змінити чужу картину (Богдана або Адміна) токеном Аліси -> 403 Forbidden (для Скриншота № 4)
+# У списку з запиту № 1 (getAll) картини Богдана або Адміна знаходяться під індексом [2] або [3]
+@foreignId = {{getAll.response.body.$[2].id}}
+
+PATCH {{baseUrl}}/api/paintings/{{foreignId}}
+Content-Type: application/json
+Authorization: Bearer {{loginAlice.response.body.token}}
+
+{
+  "style": "oil"
+}
+

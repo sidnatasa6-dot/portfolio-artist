@@ -1,6 +1,6 @@
 # Файл для розширення REST Client (VS Code). Натисніть Send Request над запитом.
 @host = http://localhost:3008
-@id = ВСТАВТЕ_ID_ІЗ_ВІДПОВІДІ_POST
+@id = 6b01d040731ef82ddc1fb904
 
 ### 1. Список записів (із пагінацією та сортуванням)
 GET {{host}}/api/paintings?limit=5&sort=-createdAt
