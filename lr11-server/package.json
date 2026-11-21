@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
     "express": "^5.3.0",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.12.3"
@@ -10,5 +11,8 @@
     "seed": "node --env-file=.env seed.js",
     "check": "node --env-file=.env scripts/check-auth.mjs"
   },
-  "type": "module"
+  "type": "module",
+  "engines": {
+    "node": ">=20.11"
+  }
 }
