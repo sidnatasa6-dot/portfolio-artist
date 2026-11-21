@@ -6,6 +6,7 @@ const paintingSchema = new mongoose.Schema(
       type: String,
       required: [true, 'Поле title є обов’язковим'],
       trim: true,
+      unique: true,
       minlength: [2, 'title: щонайменше 2 символи'],
       maxlength: [100, 'title: не більше 100 символів'],
     },
