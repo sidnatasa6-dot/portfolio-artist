@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфоліо художника — Наталія Сідько</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Майстерня живопису Наталії Сідько</h1>
+        <nav>
+            <a href="#about">Про мене</a>
+            <a href="#projects">Проєкти</a>
+            <a href="#contact">Контакти</a>
+            <a href="dashboard.html">Дашборд</a>
+            <a href="lab6.html">Конвертер і каталог</a>
+            <a href="todo.html">Список задач</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Про мене</h2>
+            <p>
+                Вітаю! Я сучасна українська художниця, працюю у техніках олійного живопису, 
+                акварелі та графіки. На цьому сайті представлена галерея моїх авторських полотен, 
+                інформація про виставки та можливість замовити індивідуальну картину.
+            </p>
+            <ul>
+                <li>Авторський пейзажний та портретний олійний живопис</li>
+                <li>Ботанічна та архітектурна акварельна ілюстрація</li>
+                <li>Створення картин на замовлення для інтер'єру</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Проєкти</h2>
+            <div class="projects-list">
+                <article>
+                    <h3>Серія полотен «Барви рідного краю»</h3>
+                    <p>Колекція з 12 пейзажів олією на полотні, присвячена природі Полтавщини та берегам Дніпра.</p>
+                </article>
+                <article>
+                    <h3>Виставка графіки «Світло і тінь»</h3>
+                    <p>Серія монохромних портретів та архітектурних замальовок тушшю й вугіллям.</p>
+                </article>
+                <article>
+                    <h3>Акварельний цикл «Квіткові етюди»</h3>
+                    <p>Ніжні ботанічні ілюстрації на бавовняному папері для оформлення сучасних інтер'єрів.</p>
+                </article>
+                <article>
+                    <h3>Арт-проєкт «Міські ритми»</h3>
+                    <p>Акрилові полотна з вечірніми вогнями старовинних вулиць та сучасною архітектурою.</p>
+                </article>
+                <article>
+                    <h3>Індивідуальний портретний живопис</h3>
+                    <p>Створення класичних та сучасних портретів на замовлення з урахуванням побажань клієнта.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Контакти</h2>
+            <form action="#" method="post">
+                <div class="form-row">
+                    <div>
+                        <label for="name">Ім'я *</label>
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="50">
+                    </div>
+                    <div>
+                        <label for="email">Електронна пошта *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <label for="topic">Тема звернення *</label>
+                <select id="topic" name="topic" required>
+                    <option value="" disabled selected>Оберіть тему</option>
+                    <option value="general">Загальне питання</option>
+                    <option value="work">Замовлення картини / Співпраця</option>
+                </select>
+
+                <label for="message">Повідомлення *</label>
+                <textarea id="message" name="message" required maxlength="500" rows="5"></textarea>
+
+                <button type="submit">Надіслати</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Наталія Сідько. Усі права захищено.</p>
+    </footer>
+
+</body>
+</html>
