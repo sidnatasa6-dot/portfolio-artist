@@ -1,0 +1,28 @@
+:root { --color-accent: #DB2777; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; background-color: #f8fafc; color: #1e293b; line-height: 1.5; }
+.app { max-width: 680px; margin: 2rem auto; padding: 1.5rem; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06); }
+.app-header { margin-bottom: 1.25rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.75rem; }
+.app-header h1 { margin: 0; font-size: 1.75rem; }
+.app-subtitle { margin: 0.25rem 0 0; color: #64748b; font-size: 0.95rem; }
+.todo-form label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+.todo-form-row { display: flex; gap: 0.5rem; }
+.todo-form-row input, .todo-filters input { flex: 1; padding: 0.55rem 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1rem; }
+button { padding: 0.55rem 1rem; border: 1px solid #cbd5e1; border-radius: 6px; background-color: #f8fafc; color: #1e293b; font-size: 0.95rem; font-weight: 500; cursor: pointer; }
+button:hover { background-color: #e2e8f0; }
+.todo-form-row button[type='submit'] { background-color: var(--color-accent); border-color: var(--color-accent); color: #ffffff; }
+.form-error { color: #b91c1c; font-size: 0.9rem; margin: 0.35rem 0 0; }
+.todo-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.25rem 0; }
+.todo-filters input { flex: 1 1 220px; }
+.filter-group { display: flex; gap: 0.35rem; }
+.filter-btn.active { background-color: var(--color-accent); border-color: var(--color-accent); color: #ffffff; }
+.counter { color: #475569; font-size: 0.95rem; margin: 0.75rem 0; }
+.todo-list { list-style: none; padding: 0; margin: 0 0 1.25rem; }
+.todo-item { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; padding: 0.65rem 0.25rem; border-bottom: 1px solid #e2e8f0; }
+.todo-label { display: flex; align-items: center; gap: 0.6rem; cursor: pointer; flex: 1; }
+.todo-title.done { text-decoration: line-through; color: #94a3b8; }
+.todo-delete { border: none; background: transparent; color: #64748b; padding: 0.25rem 0.5rem; font-size: 1rem; }
+.todo-delete:hover { background-color: #fee2e2; color: #b91c1c; }
+.status, .empty { padding: 1.25rem; text-align: center; color: #475569; background-color: #f8fafc; border-radius: 8px; margin: 1rem 0; }
+.status-error { background-color: #fee2e2; color: #7f1d1d; border: 1px solid #fecaca; }
+.reload-btn { width: 100%; margin-top: 0.5rem; }
