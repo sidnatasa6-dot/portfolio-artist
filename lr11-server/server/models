@@ -1,0 +1,29 @@
+import mongoose from 'mongoose';
+import Painting from './models/Painting.js';
+
+if (!process.env.MONGODB_URI) {
+  console.error('Не задано MONGODB_URI. Запускайте скрипт через: npm run seed');
+  process.exit(1);
+}
+
+try {
+  await mongoose.connect(process.env.MONGODB_URI);
+  console.log(`Підключено до бази: ${mongoose.connection.name}`);
+
+  await Painting.deleteMany({}); // очищаємо колекцію перед повторним наповненням
+
+  const created = await Painting.insertMany([
+    { title: 'Карпатський світанок', style: 'oil', year: 2024 },
+    { title: 'Осінній дощ у Львові', style: 'watercolor', year: 2025 },
+    { title: 'Абстракція кольору', style: 'acrylic', year: 2025 },
+    { title: 'Кіберпанк портрет', style: 'digital', year: 2026 },
+    { title: 'Етюд старого міста', style: 'sketch', year: 2026 },
+  ]);
+
+  console.log(`Додано початкових записів: ${created.length}`);
+} catch (err) {
+  console.error('Помилка під час наповнення бази даних:', err.message);
+  process.exitCode = 1;
+} finally {
+  await mongoose.disconnect();
+}

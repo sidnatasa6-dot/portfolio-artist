@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "express": "^5.3.0",
+    "mongoose": "^9.12.3"
+  },
+  "scripts": {
+    "dev": "node --watch --env-file=.env server.js",
+    "seed": "node --env-file=.env seed.js"
+  },
+  "type": "module"
+}
