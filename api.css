@@ -1,0 +1,121 @@
+.app {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+#search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+#search-form label {
+  flex-basis: 100%;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+#search-form input,
+#search-form select {
+  flex: 1 1 220px;
+  max-width: none;
+  padding: 8px 12px;
+  margin-bottom: 0;
+}
+
+.error {
+  color: #b42318;
+  font-weight: 600;
+  min-height: 1.5em;
+  margin: 8px 0;
+}
+
+#status {
+  margin: 12px 0;
+  min-height: 1.5em;
+  font-weight: 500;
+}
+
+#status p {
+  margin: 0 0 8px;
+  color: #b42318;
+}
+
+.places {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.places li {
+  margin: 0;
+}
+
+.places button {
+  width: 100%;
+  text-align: left;
+  padding: 8px 12px;
+}
+
+#result {
+  margin-top: 16px;
+}
+
+.days {
+  list-style: none;
+  margin: 12px 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.days li {
+  padding: 8px 12px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+/* Універсальна сітка карток для API з картинками/списками (Крок 10) */
+.api-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.api-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.api-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  background-color: #f1f5f9;
+}
+
+.favorites-box {
+  margin: 12px 0;
+  padding: 12px;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+.pagination-box {
+  margin-top: 16px;
+  text-align: center;
+}
